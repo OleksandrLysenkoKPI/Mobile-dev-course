@@ -1,4 +1,4 @@
-package com.example.task1_compose
+package com.example.task2
 
 import org.junit.Test
 
