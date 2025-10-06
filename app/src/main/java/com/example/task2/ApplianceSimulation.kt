@@ -4,10 +4,10 @@ import kotlin.math.pow
 
 class ApplianceSimulation {
     // кг, °C, °C, кВт/год
-    fun waterHeater(mass: Double, startTemp: Int, endTemp: Int): Double {
+    fun waterHeater(waterMass: Double, startTemp: Int, endTemp: Int): Double {
         val c = 4180 // Дж/(кг·°C)
         val deltaT = endTemp - startTemp
-        val energyJ = mass * c * deltaT
+        val energyJ = waterMass * c * deltaT
         val energyKwh = energyJ / 3.6e6
         return energyKwh
     }
@@ -20,5 +20,18 @@ class ApplianceSimulation {
     // В, Ом
     fun powerFromVoltage(voltage: Double, resistance: Double): Double {
         return voltage.pow(2) / resistance / 1000 // кВТ
+    }
+
+    // кг, °C, °C, кВт, год
+    fun washingMachineCycle(
+        waterMass: Double,
+        startTemp: Int,
+        endTemp: Int,
+        motorPower: Double,
+        cycleTime: Double
+    ): Double {
+        val heatingEnergy = waterHeater(waterMass, startTemp, endTemp)
+        val motorEnergy = motorPower * cycleTime
+        return heatingEnergy + motorEnergy
     }
 }
