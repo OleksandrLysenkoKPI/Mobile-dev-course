@@ -17,9 +17,9 @@ class ApplianceSimulation {
         return power * (dutyCycle / 100.0) * hours
     }
 
-    // В, Ом
-    fun powerFromVoltage(voltage: Double, resistance: Double): Double {
-        return voltage.pow(2) / resistance / 1000 // кВТ
+    // В, A
+    fun powerFromVoltage(voltage: Double, current: Double): Double {
+        return (voltage * current) / 1000 // кВт
     }
 
     // кг, °C, °C, кВт, год

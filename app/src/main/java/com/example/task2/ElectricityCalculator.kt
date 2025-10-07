@@ -10,6 +10,7 @@ class ElectricityCalculator {
         val cost: Double
     )
 
+//    кВТ, %, год, ₴
     fun calculateEnergyConsumption(
         power: Double,
         capacity: Int,
