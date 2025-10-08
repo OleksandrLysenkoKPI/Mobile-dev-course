@@ -16,16 +16,17 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Task2Theme {
-                SimulationsScreen()
+                MainScreen()
             }
         }
     }
 }
 
-@Preview(showBackground = true, showSystemUi = true)
-@Composable
-fun ScreenPreview() {
-    Task2Theme {
-        SimulationsScreen()
-    }
-}
+//@Preview(showBackground = true, showSystemUi = true)
+//@Composable
+//fun ScreenPreview() {
+//    Task2Theme {
+////        CalculatorScreen()
+//        SimulationsScreen()
+//    }
+//}
