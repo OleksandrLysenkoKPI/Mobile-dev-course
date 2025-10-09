@@ -1,7 +1,5 @@
 package com.example.task2
 
-import kotlin.math.pow
-
 class ApplianceSimulation {
     // кг, °C, °C, кВт/год
     fun waterHeater(waterMass: Double, startTemp: Int, endTemp: Int): Double {

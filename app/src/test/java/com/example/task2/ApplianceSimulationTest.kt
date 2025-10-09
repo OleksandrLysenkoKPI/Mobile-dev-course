@@ -19,6 +19,12 @@ class ApplianceSimulationTest {
     }
 
     @Test
+    fun testPowerFromVoltage() {
+        val energy = sim.powerFromVoltage(7.0, 60.0)
+        assertEquals(0.42, energy, 0.01)
+    }
+
+    @Test
     fun testWashingMachineCycle() {
         val energy = sim.washingMachineCycle(
             15.0,
